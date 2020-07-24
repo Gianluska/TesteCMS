@@ -1,0 +1,14 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$transp-dark: rgba(0, 0, 0, .87);
+
+$primary: mat-palette($mat-indigo, A700);
+$accent: mat-palette($mat-amber, A700);
+
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
