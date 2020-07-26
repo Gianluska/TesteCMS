@@ -1,0 +1,22 @@
+<h1 class="dialog__title" mat-dialog-title>Cadastre um novo usuário</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="onFormSubmit()" class="register__form">
+    <mat-form-field class="register__form--field" appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput cdkFocusInitial formControlName="nameFormController">
+      <mat-error *ngIf="form.controls['nameFormController'].invalid">Este campo é requirido!</mat-error>
+    </mat-form-field>
+    <mat-form-field class="register__form--field" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="emailFormController">
+      <mat-error *ngIf="form.controls['emailFormController'].invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <div class="dialog__actions">
+      <button type="submit" [disabled]="!isFormValid"
+        [matTooltip]="!isFormValid ? 'Insira os dados corretamente nos campos' : null" color="primary" mat-flat-button
+        (click)="onNoClick()">
+        Cadastrar
+      </button>
+    </div>
+  </form>
+</div>

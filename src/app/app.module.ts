@@ -8,18 +8,27 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { CmsComponent } from './cms/cms.component';
+import { GianLogoComponent } from './gian-logo/gian-logo.component';
+import { DialogRegisterUserComponent } from './dialog-register-user/dialog-register-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CmsComponent,
+    GianLogoComponent,
+    DialogRegisterUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

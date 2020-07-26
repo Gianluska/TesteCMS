@@ -3,6 +3,8 @@
 @include mat-core();
 
 $transp-dark: rgba(0, 0, 0, .87);
+$transp-medium: rgba(0, 0, 0, .6);
+$transp-light: rgba(0, 0, 0, .12);
 
 $primary: mat-palette($mat-indigo, A700);
 $accent: mat-palette($mat-amber, A700);

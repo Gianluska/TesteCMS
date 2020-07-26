@@ -8,11 +8,11 @@
     <mat-form-field class="login__form--field" appearance="outline">
       <mat-label>Senha</mat-label>
       <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Esconder Senha'" [attr.aria-pressed]="hide">
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
-    <button type="submit" mat-flat-button color="primary" class="login__form--submit">ENTRAR</button>
+    <button [routerLink]="'/cms'" type="submit" mat-flat-button color="primary" class="login__form--submit">ENTRAR</button>
   </form>
-  <p class="register__button">Ainda não tem uma conta? <a href="/register">Cadastrar</a></p>
+  <!-- <p class="register__button">Ainda não tem uma conta? <a href="/register">Cadastrar</a></p> -->
 </div>
