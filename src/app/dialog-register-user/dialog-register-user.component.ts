@@ -57,7 +57,7 @@ export class DialogRegisterUserComponent {
   private openSnackBar(isSuccess: boolean, name) {
     const message = isSuccess
       ? `Usuário: ${name} foi cadastrado com sucesso!`
-      : `Erro ao cadastrar o Usuário: ${name}`;
+      : `Erro ao cadastrar o usuário: ${name}`;
 
     this.snackBar.open(message, null, {
       duration: 3000,

@@ -12,6 +12,7 @@ import { CmsComponent } from './cms/cms.component';
 import { GianLogoComponent } from './gian-logo/gian-logo.component';
 import { DialogRegisterUserComponent } from './dialog-register-user/dialog-register-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserTableComponent } from './user-table/user-table.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginPageComponent,
     CmsComponent,
     GianLogoComponent,
-    DialogRegisterUserComponent
+    DialogRegisterUserComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,

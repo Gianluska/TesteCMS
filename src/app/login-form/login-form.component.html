@@ -1,18 +1,22 @@
 <div class="login__wrapper">
   <h1 class="login__wrapper--title">Entrar</h1>
-  <form class="login__form">
+  <form [formGroup]="form" class="login__form">
     <mat-form-field class="login__form--field" appearance="outline">
       <mat-label>Usuário</mat-label>
-      <input matInput>
+      <input matInput formControlName="userFormController">
+      <mat-error *ngIf="form.controls['userFormController'].invalid">Este campo é requirido!</mat-error>
     </mat-form-field>
     <mat-form-field class="login__form--field" appearance="outline">
       <mat-label>Senha</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Esconder Senha'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="passwordFormController">
+      <mat-error *ngIf="form.controls['passwordFormController'].invalid">Este campo é requirido!</mat-error>
+      <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Esconder Senha'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
-    <button [routerLink]="'/cms'" type="submit" mat-flat-button color="primary" class="login__form--submit">ENTRAR</button>
+    <button [disabled]="!isFormValid" [matTooltip]="!isFormValid ? 'Insira os dados corretamente nos campos' : null"
+      [routerLink]="'/cms'" type="submit" mat-flat-button color="primary" class="login__form--submit">ENTRAR</button>
   </form>
   <!-- <p class="register__button">Ainda não tem uma conta? <a href="/register">Cadastrar</a></p> -->
 </div>
